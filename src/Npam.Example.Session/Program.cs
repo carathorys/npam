@@ -6,14 +6,14 @@ namespace Npam.Example.Session
 {
     public class Program
     {
-        const string PamServiceName = "passwd";
+        const string ServiceName = "wg-dashboard";
 
         public static void Main(string[] args)
         {
             Console.Write("Username: ");
             var user = Console.ReadLine();
 
-            using var mySession = new NpamSession(PamServiceName, user, ConvHandler, IntPtr.Zero);
+            using var mySession = new NpamSession(ServiceName, user, ConvHandler, IntPtr.Zero);
             var retVal = mySession.Start();
             if (retVal == PamStatus.PamSuccess)
             {

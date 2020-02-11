@@ -4,7 +4,7 @@ namespace Npam.Example.User
 {
     public class Program
     {
-        private const string ServiceName = "passwd";
+        private const string ServiceName = "wg-dashboard";
 
         public static void Main(string[] args)
         {
